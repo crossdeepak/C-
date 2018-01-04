@@ -1,0 +1,256 @@
+1. Write a C program to accept two integers and check whether they are equal or not. 
+Test Data : 15 15
+Expected Output : 
+Number1 and Number2 are equal
+
+
+
+Sol:
+#include <stdio.h>
+
+
+int main()
+
+{
+
+   int a,b=0;
+
+   printf("Enter two numbers :\n");
+
+   scanf("%d",&a);
+
+   scanf("%d",&b);
+
+   if(a==b)
+
+    {
+
+        printf("Numbers are equal!");
+
+    }
+
+    else
+
+        printf("Numbers are not equal!");
+
+}
+
+
+-------------------------------------------------------------------------------
+
+2. Write a C program to check whether a given number is positive or negative. 
+Test Data : 15 
+Expected Output :
+15 is a positive number
+
+
+
+Sol:
+#include <stdio.h>
+
+
+int main()
+
+{
+
+   int a=0;
+
+   printf("Enter a number :\n");
+
+   scanf("%d",&a);
+
+   if(a<0)
+
+    {
+
+        printf("Number is negative!");
+
+    }
+
+    else if(a>0)
+
+    {
+
+        printf("Number is postive!");
+
+    }
+
+    else if(a==0)
+
+    {
+
+        printf("Number is zero!");
+
+    }
+
+    else
+
+         printf("Invalid input");
+
+}
+
+
+-------------------------------------------------------------------------------
+
+3. Write a C program to check whether a triangle is Equilateral, Isosceles or Scalene. 
+Test Data : 
+50 50 60 
+Expected Output :
+This is an isosceles triangle.
+
+
+Sol:
+#include <stdio.h>
+
+
+int main()
+
+{
+
+   int a,b,c=0;
+
+   printf("Sides of triangle :\n");
+
+   scanf("%d %d %d",&a,&b,&c);
+
+   if(a==b && b==c)
+
+    {
+
+        printf("Triangle is Equilateral");
+
+    }
+
+    else if(a!=b && b!=c)
+
+    {
+
+        printf("Triangle is Scalene");
+
+    }
+
+    else if((a==b || b==c || c==a) && (a!=b || b!=c || c!=a))
+
+    {
+
+        printf("Triangle is Isoscales");
+
+    }
+
+    else
+
+        printf("Invalid input");
+
+}
+
+
+-------------------------------------------------------------------------------
+
+4. Write a C program to check whether a character is an alphabet, digit or special character. 
+Test Data : 
+@
+Expected Output :
+This is a special character.
+
+
+Sol:
+#include <stdio.h>
+
+int main()
+
+{
+
+   char a=0;
+
+   printf("Enter a value :\n");
+
+   scanf("%c",&a);
+
+   if(a >= 'a' && a<='z' || a >= 'A' && a<='Z')
+
+    {
+
+        printf("Value is alphabet");
+
+    }
+
+    else if(a>='0' && a<='9')
+
+    {
+
+        printf("Value is a number");
+
+    }
+
+    else
+
+    {
+
+        printf("Value is a special character");
+
+    }
+
+}
+
+
+-------------------------------------------------------------------------------
+
+5. Write a program in C to calculate and print the Electricity bill of a given customer. The customer id., name and unit consumed by the user should be taken from the keyboard and display the total amount to pay to the customer. The charge are as follow : Go to the editor
+
+Unit	                         Charge/unit
+upto 199	                      @1.20
+200 and above but less than 400	@1.50
+400 and above but less than 600	@1.80
+600 and above	@2.00
+If bill exceeds Rs. 400 then a surcharge of 15% will be charged and the minimum bill should be of Rs. 100/-
+
+Test Data : 
+1001
+James 
+800 
+Expected Output :
+Customer IDNO :1001 
+Customer Name :James 
+unit Consumed :800 
+Amount Charges @Rs. 2.00 per unit : 1600.00 
+Surchage Amount : 240.00 
+Net Amount Paid By the Customer : 1840.00
+
+
+Sol:
+#include <stdio.h>  
+void main()
+{  
+   int cid, conu;
+   float chr,gramt,netamt,surchr=0;
+   char connm[25];
+
+   printf("Input Customer ID : ");
+   scanf("%d",&cid);
+   printf("Input the name of the customer : ");
+   scanf("%s",connm);
+   printf("Input the unit consumed by the customer : ");
+   scanf("%d",&conu);
+   if (conu <200 )
+	chr = 1.20;
+   else	if (conu>=200 && conu<400)
+		chr = 1.50;
+	else if (conu>=400 && conu<600)
+			chr = 1.80;
+		else
+			chr = 2.00;
+   gramt = conu*chr;
+   if (gramt>300)
+	surchr = gramt*15/100.0;
+   netamt = gramt+surchr;
+   if (netamt  < 100)
+	netamt =100;
+   printf("\nElectricity Bill\n");
+   printf("Customer IDNO                       :%d\n",cid);
+   printf("Customer Name                       :%s\n",connm);
+   printf("unit Consumed                       :%d\n",conu);
+   printf("Amount Charges @Rs. %4.2f  per unit :%8.2f\n",chr,gramt);
+   printf("Surchage Amount                     :%8.2f\n",surchr);
+   printf("Net Amount Paid By the Customer     :%8.2f\n",netamt);
+
+}  
