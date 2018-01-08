@@ -1,0 +1,167 @@
+1)  Display 10 to 1.
+
+
+Sol:
+#include <stdio.h>
+
+
+int main()
+
+{
+
+    for(int i=10;i>0;i--)
+
+    {
+
+        printf("%d\n",i);
+
+    }
+
+}
+
+2) Display z to a.
+
+Sol:
+#include <stdio.h>
+
+
+int main()
+
+{
+
+    for(char i='z';i>='a';i--)
+
+    {
+
+        printf("%c\n",i);
+
+    }
+
+}
+
+3) Math library
+
+Sqrt
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int a=0;
+
+    float sqta=0;
+
+    printf("Enter a number :\n");
+
+    scanf("%d",&a);
+
+    sqta=sqrt(a);
+
+    printf("Square root of %d is %.2f",a,sqta);
+
+}
+
+number-8  output-2.83
+
+floor
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int a=0;
+
+    float sqta=0;
+
+    printf("Enter a number :\n");
+
+    scanf("%d",&a);
+
+    sqta=sqrt(a);
+
+    printf("Square root of %d is %.2f",a,floor(sqta));
+
+}
+
+number-8  output-2.00
+
+ceil
+
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int a=0;
+
+    float sqta=0;
+
+    printf("Enter a number :\n");
+
+    scanf("%d",&a);
+
+    sqta=sqrt(a);
+
+    printf("Square root of %d is %.2f",a,ceil(sqta));
+
+}
+
+number-8  output-3.00
+
+5) Addition of two arrays
+
+Sol:
+#include <stdio.h>
+
+#include <math.h>
+
+int main()
+
+{
+
+    int i,a[3],b[3],c[3];
+
+    for(i=1;i<=3;i++)
+
+    {
+
+        printf("Array 1 values : \n");
+
+        scanf("%d",&a[i]);
+
+    }
+
+    for(i=1;i<=3;i++)
+
+    {
+
+        printf("Array 2 values : \n");
+
+        scanf("%d",&b[i]);
+
+    }
+
+    printf("Sum of arrays : \n");
+
+    for(i=1;i<=3;i++)
+
+    {
+
+        c[i]=a[i]+b[i];
+
+        printf("%d\n",c[i]);
+
+    }
+
+}
